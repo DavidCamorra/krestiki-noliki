@@ -35,8 +35,10 @@ def gameX():
 
 i = 1
 
-for i in range(9):
-    if i % 2 == 1:
+for i in range(10):
+    if i == 9:
+        print('Ничья!')
+    elif i % 2 == 1:
         game0()
         field()
         if ((step0.count(1) and step0.count(2) and step0.count(3)) == 1) or ((step0.count(1) and step0.count(4) and step0.count(7)) == 1) or ((step0.count(1) and step0.count(5) and step0.count(9)) == 1) or ((step0.count(2) and step0.count(5) and step0.count(8)) == 1) or ((step0.count(3) and step0.count(6) and step0.count(9)) == 1) or ((step0.count(4) and step0.count(5) and step0.count(6)) == 1) or ((step0.count(7) and step0.count(8) and step0.count(9)) == 1) or ((step0.count(3) and step0.count(5) and step0.count(7)) == 1):
@@ -51,3 +53,4 @@ for i in range(9):
             print('Выиграли крестики!')
             break
         i += 1
+
